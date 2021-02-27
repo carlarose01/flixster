@@ -137,6 +137,52 @@
             </objects>
             <point key="canvasLocation" x="48" y="1134"/>
         </scene>
+        <!--Superhero Details View Controller-->
+        <scene sceneID="PPf-Uh-pq6">
+            <objects>
+                <viewController id="e5G-YO-Fi1" customClass="SuperheroDetailsViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7kf-Db-eFJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qU-IX-MdF">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="284"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-UF-CWn">
+                                <rect key="frame" x="20" y="200" width="112" height="166"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3B-Zj-8fc">
+                                <rect key="frame" x="140" y="292" width="237" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC0-wW-n8A">
+                                <rect key="frame" x="20" y="374" width="357" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uFY-S9-D3S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jgW-7o-NbY"/>
+                    <connections>
+                        <outlet property="backdropView" destination="1qU-IX-MdF" id="1Ed-Bz-pDu"/>
+                        <outlet property="posterView" destination="yXR-UF-CWn" id="ZGt-J4-4tW"/>
+                        <outlet property="synopsisLabel" destination="IC0-wW-n8A" id="2rd-jH-odT"/>
+                        <outlet property="titleLabel" destination="t3B-Zj-8fc" id="2WB-Gh-EEX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kma-lU-LCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="995.65217391304361" y="1133.967391304348"/>
+        </scene>
         <!--Now Playing-->
         <scene sceneID="DXq-tI-a67">
             <objects>
@@ -156,7 +202,7 @@
             </objects>
             <point key="canvasLocation" x="49" y="-395"/>
         </scene>
-        <!--Movie Grid View Controller-->
+        <!--Superhero-->
         <scene sceneID="gw2-xt-CFr">
             <objects>
                 <viewController id="Af9-C2-60e" customClass="MovieGridViewController" customModule="flixster" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,6 +237,7 @@
                                         <size key="customSize" width="197" height="227"/>
                                         <connections>
                                             <outlet property="posterView" destination="kjA-xQ-xhw" id="tpF-GV-9SX"/>
+                                            <segue destination="e5G-YO-Fi1" kind="show" id="SsU-1Y-1et"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -199,7 +246,7 @@
                         <viewLayoutGuide key="safeArea" id="Alh-Sn-bRp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MuJ-AK-pol"/>
+                    <navigationItem key="navigationItem" title="Superhero" id="MuJ-AK-pol"/>
                     <connections>
                         <outlet property="collectionView" destination="H0j-W5-qLY" id="sCH-Yk-1rY"/>
                     </connections>
